@@ -1,0 +1,142 @@
+/* Cuộn trang mượt */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Kiểu chung của trang */
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.95em;
+    color: #123b75;
+}
+
+/* Nội dung chính */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Lưới hình ảnh */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Khung của từng ảnh */
+figure {
+    margin: 0;
+    min-width: 0;
+    text-align: center;
+}
+
+/* Hình ảnh */
+img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid blue;
+    border-radius: 25px;
+}
+
+/* Chú thích ảnh */
+figcaption {
+    margin-top: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+/* Chân trang */
+footer {
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+footer a {
+    color: #003399;
+    font-weight: bold;
+}
+
+/* MEDIA QUERY 1: Màn hình điện thoại */
+@media screen and (max-width: 600px) {
+    body {
+        margin: 8px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    img {
+        height: 220px;
+    }
+}
+
+/* MEDIA QUERY 2: Màn hình từ 601px đến 800px */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    img {
+        height: 170px;
+    }
+}
+
+/* MEDIA QUERY 3: Màn hình từ 801px đến 1100px */
+@media screen and (min-width: 801px) and (max-width: 1100px) {
+    body {
+        font-size: 18px;
+        margin: 12px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .grid {
+        gap: 18px;
+    }
+}
+
+/* MEDIA QUERY 4: Màn hình từ 1101px trở lên */
+@media screen and (min-width: 1101px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    img {
+        height: 200px;
+    }
+}
